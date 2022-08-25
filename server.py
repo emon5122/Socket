@@ -1,8 +1,8 @@
 import socket
 import threading
 
-HOST = socket.gethostbyname(socket.gethostname())
-PORT = 5050
+HOST = "127.0.0.1"  # socket.gethostbyname(socket.gethostname())
+PORT = 6650
 FORMAT = "utf-8"
 ADDR = (HOST, PORT)
 DISCONNECT_MSG = "!DISCONNECT"
