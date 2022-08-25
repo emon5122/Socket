@@ -21,6 +21,10 @@ def send(msg):
     print(client.recv(2048).decode(FORMAT))
 
 
-send("Hellllllllllllo")
-input()
-send(DISCONNECT_MSG)
+while True:
+    print("Write to send message or type !DISCONNECT to exit")
+    client_msg = input()
+    send(client_msg)
+    if client_msg == DISCONNECT_MSG:
+        send(DISCONNECT_MSG)
+        break
